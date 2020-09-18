@@ -1,8 +1,9 @@
 # My-Projects
 
 # to install:
-  npm install
-  ng serve
+* npm install
+* ng serve
 
-=> user name: Admin
-=> password: 9090
+# user details:
+* user name: Admin
+* password: 9090
