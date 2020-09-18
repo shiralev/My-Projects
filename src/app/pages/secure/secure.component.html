@@ -1,0 +1,60 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+      <mat-toolbar class="header shape"> 
+        My Movies 
+      </mat-toolbar>
+
+      <div class="user">
+        Hello {{this.appState.userName}}!
+      </div>
+  
+      <mat-nav-list>
+        <mat-list-item (click)="closeSideNav()">
+          <mat-icon matListIcon>add_to_queue</mat-icon>
+          <a matLine (click)="openDialog()">Add Movie</a>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="mapCat.get(0)" (click)="closeSideNav()">
+          <mat-icon matListIcon>local_taxi</mat-icon>
+          <a matLine (click)="ChangeCategory(0)" [ngStyle]="{'font-weight' : catgoryType == 0 ? 'bold' : '400' }">Action</a>
+        </mat-list-item>
+  
+        <mat-list-item *ngIf="mapCat.get(1)" (click)="closeSideNav()">
+          <mat-icon matListIcon>directions_walk</mat-icon>
+          <a matLine (click)="ChangeCategory(1)" [ngStyle]="{'font-weight' : catgoryType == 1 ? 'bold' : '400' }">Drama</a>
+        </mat-list-item>
+  
+        <mat-list-item *ngIf="mapCat.get(2)" (click)="closeSideNav()">
+          <mat-icon matListIcon>tag_faces</mat-icon>
+          <a matLine (click)="ChangeCategory(2)" [ngStyle]="{'font-weight' : catgoryType == 2 ? 'bold' : '400' }">Comedy</a>
+        </mat-list-item>
+  
+        <mat-list-item *ngIf="mapCat.get(3)" (click)="closeSideNav()">
+          <mat-icon matListIcon>group_work</mat-icon>
+          <a matLine (click)="ChangeCategory(3)" [ngStyle]="{'font-weight' : catgoryType == 3 ? 'bold' : '400' }">Other</a>
+        </mat-list-item>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
+        <div  fxLayout="row" fxLayoutAlign="start center">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button> 
+          <h1 class="title"> My Movies </h1>
+        </div>
+        <img src="./assets/images/IMDB_Logo.png"/>
+      </div>
+
+      <div class="movies"> 
+        <div>
+          <app-movie-card [movieDetails]="movie" (removeMovie)="removeMovie($event)" *ngFor="let movie of moviesToShow; index as i" ></app-movie-card>
+        </div>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

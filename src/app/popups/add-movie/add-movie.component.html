@@ -1,0 +1,44 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <h2 mat-dialog-title>Add Movie</h2>
+  <mat-dialog-content class="mat-typography">
+    
+    <form [formGroup]="formGroup">
+      <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+        <mat-form-field class="inputs">
+          <input matInput placeholder="name" formControlName="name" required>
+          <mat-error *ngIf="hasError('name', 'required')">You must enter a value</mat-error> 
+          <mat-error *ngIf="hasError('name', 'forbiddenName')">This movie already exists</mat-error> 
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="inputs">
+          <mat-label>category</mat-label>
+          <select formControlName="category" matNativeControl required>
+            <option *ngFor="let cat of category; let i = index" [value]="cat.value">
+              {{cat.key}}
+            </option>
+          </select>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="inputs">
+          <input matInput placeholder="link" formControlName="link" required>
+          <mat-error *ngIf="hasError('link', 'required')">You must enter a value</mat-error>
+          <mat-error *ngIf="hasError('link', 'forbiddenLink')">Illegal link</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="inputs">
+          <input matInput placeholder="poster" formControlName="poster" required>
+          <mat-error *ngIf="hasError('poster', 'required')">You must enter a value</mat-error>
+          <mat-error *ngIf="hasError('poster', 'forbiddenPoster')">Illegal poster</mat-error>
+        </mat-form-field>
+      </mat-card-content>
+    </form> 
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="addMovie()" cdkFocusInitial>Add</button>
+    <button mat-button mat-dialog-close>Cancel</button>
+  </mat-dialog-actions>
+</div>

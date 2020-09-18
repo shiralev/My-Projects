@@ -1,0 +1,54 @@
+/* Add application styles & imports to this file! */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ng2-smart-table table {
+    border: 2px solid black !important;
+}
+
+button.mat-raised-button.mat-button-base {
+    background: #1e6bb8;
+    color: white;
+}
+
+ul.ng2-smart-pagination.pagination {
+    position: absolute;
+    right: 34%;
+}
+
+.page-item.disabled .page-link {
+	color: darkgray !important;
+}
+
+.page-item.active .page-link {
+	background: #1e6bb8 !important;
+	color: white !important;
+	border: 1px solid #1e6bb8 !important;
+}
+
+.page-item {
+	margin: 3px;
+}
+
+.page-link {
+	color: #1e6bb8 !important;
+	padding: 8px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border-radius: 4px !important;
+}
+
+.page-link:hover {
+	background-color: #1e6bb8 !important;
+	color: white !important;
+	border: 1px solid #1e6bb8;
+}
+
+.ng2-smart-pagination .page-link-next,
+.ng2-smart-pagination .page-link-prev {
+	font-size: 14px !important;
+}
+
+.ng2-smart-page-item a:hover {
+	text-decoration: none !important;
+}

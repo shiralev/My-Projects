@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Jumanji",
+        "category": 2,
+        "link": "https://www.imdb.com/title/tt7975244/?ref_=hm_inth_1",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTVjMmFiMDUtOWQ4My00YzhmLWE3MzEtODM1NDFjMWEwZTRkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
+    },
+    {
+        "name": "Ice Age",
+        "category": 3,
+        "link": "https://www.imdb.com/title/tt0438097/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAwODg3OTAxMl5BMl5BanBnXkFtZTcwMjg2NjYyMw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg"
+    },
+    {
+        "name": "Blue Jasmine",
+        "category": 1,
+        "link": "https://www.imdb.com/title/tt2334873/?ref_=nv_sr_srsg_0",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTc0ODk5MzEyMV5BMl5BanBnXkFtZTcwMzI0MDY1OQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
+    }
+]
+

@@ -1,0 +1,37 @@
+<div class="bckg">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h1> My Movies </h1>
+    <img src="./assets/images/IMDB_Logo.png"/>
+  </div>
+
+  <div class="card">
+    <div class="contact">
+      <h2> Login </h2>
+
+      <form [formGroup]="formGroup">
+        <mat-card-content>
+          <mat-form-field class="inputs">
+            <input matInput placeholder="User Name" formControlName="user" required>
+            <mat-error *ngIf="hasError('user', 'required')">You must enter a value</mat-error>          
+          </mat-form-field>
+          <br>
+
+          <mat-form-field class="inputs">
+            <input type="password" matInput placeholder="Password" formControlName="pass" required>
+            <mat-error *ngIf="hasError('pass', 'required')">You must enter a value</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+
+        <mat-error class="userError" *ngIf="isError">User Doesn't Exists</mat-error>
+
+        <mat-card-actions>
+          <button type="button" class="btn" mat-raised-button (click)="run()"> login </button>
+        </mat-card-actions>     
+      </form>    
+    </div>
+  </div>
+
+</div>
+
+
+

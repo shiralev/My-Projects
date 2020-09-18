@@ -1,0 +1,29 @@
+.card {
+    margin: 20px;
+    padding: 20px;
+    border: 2px black solid; 
+    border-radius: 40px 0;
+    background:  black;
+}
+
+.poster {
+    width: 150px;
+    border-radius: 40px 0;
+}
+
+.text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f6c800;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.text.title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.close-icon {
+    color: #f6c800;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+<div class="card">
+  <div (click)="removeMovie.emit(this.movieDetails)">
+    <mat-icon matListIcon class="close-icon">close</mat-icon>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="space-between center">
+    <div class="text title"> {{movieDetails.name}} </div>
+    <a  class="text" [href]="movieDetails.link" target="_blank">
+      <img class="poster" [src]="movieDetails.poster" alt="poster">
+    </a>
+    <a  class="text" [href]="movieDetails.link" target="_blank">
+      Go to IMDb 
+    </a>
+  </div> 
+</div>
